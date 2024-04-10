@@ -10,68 +10,41 @@ namespace ColorSpheres
         private byte blue;
         private byte alpha;
 
-        // Constructor that accepts all the necessary parameters to initialize the state of a color.
+        public byte Red
+        {
+            get { return red; }
+            set { red = value; }
+        }
+
+        public byte Green
+        {
+            get { return green; }
+            set { green = value; }
+        }
+
+        public byte Blue
+        {
+            get { return blue; }
+            set { blue = value; }
+        }
+
+        public byte Alpha
+        {
+            get { return alpha; }
+            set { alpha = value; }
+        }
+
         public Color(byte r, byte g, byte b, byte a)
         {
-            red = r;
-            green = g;
-            blue = b;
-            alpha = a;
+            Red = r;
+            Green = g;
+            Blue = b;
+            Alpha = a;
         }
 
-        // Constructor that accepts red, green, and blue, setting alpha to 255 (opaque).
         public Color(byte r, byte g, byte b) : this(r, g, b, 255)
         {
-            red = r;
-            green = g;
-            blue = b;
-
         }
 
-        // getters & setters
-        public byte GetGrey()
-        {
-            return (byte)((red + blue + green) / 3);
-        }
-
-        public byte GetRed()
-        {
-            return this.red;
-        }
-
-        public void SetRed(byte red)
-        {
-            this.red = red;
-        }
-
-        public byte GetGreen()
-        {
-            return this.green;
-        }
-
-        public void SetGreen(byte green)
-        {
-            this.green = green;
-        }
-
-        public byte GetBlue()
-        {
-            return this.blue;
-        }
-
-        public void SetBlue(byte blue)
-        {
-            this.blue = blue;
-        }
-
-        public byte GetAlpha()
-        {
-            return this.alpha;
-        }
-
-        public void GetAlpha(byte alpha)
-        {
-            this.alpha = alpha;
-        }
     }
 }

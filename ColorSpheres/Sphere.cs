@@ -7,20 +7,22 @@ namespace ColorSpheres
 
     class Sphere
     {
-        byte[] colors;
-        double radius;
-        int timesThrown;
+        private Color color;
+        private double radius;
+        private int timesThrown;
 
-        public Sphere(byte[] colors, double radius)
+        public Sphere(Color color, double radius)
         {
-            this.colors = colors;
+            this.color = color;
             this.radius = radius;
             this.timesThrown = 0;
         }
+
         public void Pop()
         {
             radius = 0;
         }
+
         public void Throw()
         {
             if (radius > 0)
@@ -29,31 +31,14 @@ namespace ColorSpheres
             }
         }
 
-        // Getters & Setters
-        public byte[] GetColors()
-        {
-            return this.colors;
-        }
-
-        public void SetColors(byte[] colors)
-        {
-            this.colors = colors;
-        }
-
-        public double GetRadius()
-        {
-            return this.radius;
-        }
-
-        public void SetRadius(double radius)
-        {
-            this.radius = radius;
-        }
-
         public int GetTimesThrown()
         {
-            return this.timesThrown;
+            return timesThrown;
         }
 
+        public Color GetColor()
+        {
+            return color;
+        }
     }
 }
