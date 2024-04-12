@@ -2,7 +2,7 @@ using System;
 
 namespace BetterColorSpheres
 {
-     class Sphere
+    class Sphere
     {
         public Color Color { get; set; }
         public double Radius { get; set; }
